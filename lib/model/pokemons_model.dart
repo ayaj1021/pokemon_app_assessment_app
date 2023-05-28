@@ -9,6 +9,14 @@ class PokemonModel {
       required this.id,
       required this.title,
       required this.type});
+
+  // static PokemonModel fromJson(Map<String, dynamic> data) {
+  //   return PokemonModel(
+  //       img: data['img'],
+  //       id: data['id'],
+  //       title: data['title'],
+  //       type: data['type']);
+  // }
 }
 
 List<PokemonModel> getPokemonModel() {

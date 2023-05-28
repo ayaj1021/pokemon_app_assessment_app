@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pokedex_pokemon_app/screens/splash_screen%20.dart';
 
-import 'screens/home_screen.dart';
+import 'package:pokedex_pokemon_app/views/screens/home_screen.dart';
+import 'package:pokedex_pokemon_app/views/screens/pokemon_details_screen.dart';
+import 'package:pokedex_pokemon_app/views/screens/splash_screen%20.dart';
+
+
 
 void main() {
   runApp(ProviderScope(child: MyApp()));
@@ -29,6 +32,10 @@ class MyApp extends StatelessWidget {
           GoRoute(
             path: "homescreen",
             builder: (context, state) => const HomeScreen(),
+          ),
+           GoRoute(
+            path: "pokemondetailsscreen",
+            builder: (context, state) => const PokemonDetailsScreen(),
           )
         ])
   ]);

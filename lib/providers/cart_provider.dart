@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pokedex_pokemon_app/model/pokemons_model.dart';
 
-final cartProvider = StateProvider< CartNotifier >(
+final cartProvider = StateNotifierProvider< CartNotifier, List<PokemonModel> >(
   (ref) => CartNotifier(),
 );
 
